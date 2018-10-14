@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div>
+    <h3>Order list</h3>
+    <table>
+        <tr>
+            <td><p>Name</p></td>
+            <td><p>Address</p></td>
+            <td><p>BookId</p></td>
+            <td><p>Date</p></td>
+            <td></td>
+        </tr>
+        @foreach (var b in ViewBag.Orders)
+        {
+        <tr>
+            <td><p>@b.Person</p></td>
+            <td><p>@b.Address</p></td>
+            <td><p>@b.BookId</p></td>
+            <td><p>@b.Date</p></td>
+        </tr>
+        }
+    </table>
+</div>

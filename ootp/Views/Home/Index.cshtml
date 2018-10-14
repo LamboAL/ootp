@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <div>
+        <h3>Books list</h3>
+        <table>
+            <tr>
+                <td><p>Name</p></td>
+                <td><p>Author</p></td>
+                <td><p>Price</p></td>
+                <td></td>
+            </tr>
+            @foreach (var b in ViewBag.Books)
+            {
+                <tr>
+                    <td><p>@b.Name</p></td>
+                    <td><p>@b.Author</p></td>
+                    <td><p>@b.Price</p></td>
+                    <td><p><a href="/Home/Take/@b.Id">Take</a></p></td>
+                </tr>
+            }
+        </table>
+    </div>
